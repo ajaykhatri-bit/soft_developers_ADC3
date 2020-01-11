@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+{% extends "main/header.html" %}
+{% block content %}
+	<form method="post">
+		{% csrf_token %}
+		{{form}}
+
+		<br><button style="color: red">Register</button>
+	</form>
+{% endblock%}
+</html>
