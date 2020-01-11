@@ -7,4 +7,6 @@ from .models import App
 	#return HttpResponse("we are in development phase")
 
 def homepage(request):
+	print(App.objects.all)
 	return render(request=request, template_name="main/home.html", context={"apps": App.objects.all})
+
