@@ -45,4 +45,3 @@ def user_login(request):
 
 	form = AuthenticationForm()
 	return render(request,"main/login.html", context={"form": form})
-# Create your views here.
