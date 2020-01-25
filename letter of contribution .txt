@@ -1,9 +1,3 @@
-nimesh:
-create download branch
-testing
+group member: AjayKhatri, NimeshBhattrai, PrabinaRai
 
-
-ajay:
-create user branch
-testing
-templates
+All member has contributed in every aspect of this project equally.
