@@ -20,12 +20,14 @@ class User(models.Model):
 	user_fname = models.CharField(max_length = 100)
 	user_lname = models.CharField(max_length = 100)
 	user_email = models.EmailField()
-	#fullname = models.CharField(max_length=100)
-    #emp_code = models.CharField(max_length=3)
-    #mobile= models.CharField(max_length=15)
-    #position= models.ForeignKey(Position,on_delete=models.CASCADE)
+	password = models.CharField(max_length=32, null = True )
+
 
 class Device(models.Model):
 	device_name = models.CharField(max_length = 100)
 	device_model = models.CharField(max_length = 100)
 
+class software(models.Model):
+	title = models.CharField(max_length=100)
+	name = models.CharField(max_length=20)
+	stw = models.FileField(upload_to="software_upload/stws")
