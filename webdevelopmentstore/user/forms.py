@@ -1,16 +1,16 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from software.models import User
 
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
 
 
 
-class OurForm(UserCreationForm):
+class OurForm(forms.ModelForm):
 	email = forms.EmailField(required=True)
 
 	class Meta:
 		model = User
-		fields = ('username', 'email', 'password', 'password2')
+		fields = ('user_fname','user_lname', 'email', 'password',)
 
 
 	def save(self, commit=True):
@@ -22,22 +22,5 @@ class OurForm(UserCreationForm):
 		return user
 					
 
-#from django import forms
-#from .models import User
 
-
-#class UserForm(forms.ModelForm):
-
-    #class Meta:
-        #model = User
-        #fields = ('fullname','mobile','emp_code','position')
-        #labels = {
-            #'fullname':'Full Name',
-            #'emp_code':'EMP. Code'
-        #}
-
-    #def __init__(self, *args, **kwargs):
-        #super(register,self).__init__(*args, **kwargs)
-        #self.fields['position'].empty_label = "Select"
-        #self.fields['emp_code'].required = False
 
